@@ -1,5 +1,10 @@
 ## Side futures
 
+[![Build Status](https://img.shields.io/travis/com/nazar-pc/side-futures/master?style=flat-square)](https://travis-ci.org/nazar-pc/side-futures)
+[![Crates.io](https://img.shields.io/crates/v/side-futures?style=flat-square)](https://crates.io/crates/side-futures)
+[![Docs](https://img.shields.io/badge/docs-latest-blue.svg?style=flat-square)](https://docs.rs/side-futures)
+[![License](https://img.shields.io/github/license/nazar-pc/side-futures?style=flat-square)](https://github.com/nazar-pc/side-futures)
+
 This crate provides an ability to send future for execution on the runtime that may be in a different thread. Typical use case is heavily threaded application where there are synchronous callbacks, but some asynchronous tasks also need to be executed.
 
 ## Example
