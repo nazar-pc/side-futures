@@ -1,0 +1,18 @@
+[package]
+name = "side-futures"
+version = "0.1.0"
+description = "Send future for execution on the runtime that may be in a different thread"
+authors = ["Nazar Mokrynskyi <nazar@mokrynskyi.com>"]
+edition = "2018"
+license = "0BSD"
+keywords = ["future", "send", "spawn"]
+
+[dependencies]
+futures = "0.3.4"
+
+[dev-dependencies.actix-rt]
+version = "1.0.0"
+
+[dev-dependencies.tokio]
+features = ["rt-core", "rt-threaded", "macros", "time"]
+version = "0.2.13"
