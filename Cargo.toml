@@ -1,11 +1,14 @@
 [package]
 name = "side-futures"
-version = "0.1.0"
+version = "0.1.1"
 description = "Send future for execution on the runtime that may be in a different thread"
 authors = ["Nazar Mokrynskyi <nazar@mokrynskyi.com>"]
 edition = "2018"
 license = "0BSD"
 keywords = ["future", "send", "spawn"]
+documentation = "https://docs.rs/side-futures"
+repository = "https://github.com/nazar-pc/side-futures"
+readme = "readme.md"
 
 [dependencies]
 futures = "0.3.4"
