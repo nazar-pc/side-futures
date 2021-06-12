@@ -1,6 +1,6 @@
 [package]
 name = "side-futures"
-version = "0.1.1"
+version = "0.1.2"
 description = "Send future for execution on the runtime that may be in a different thread"
 authors = ["Nazar Mokrynskyi <nazar@mokrynskyi.com>"]
 edition = "2018"
