@@ -11,11 +11,11 @@ repository = "https://github.com/nazar-pc/side-futures"
 readme = "readme.md"
 
 [dependencies]
-futures = "0.3.4"
+futures = "0.3.15"
 
-[dev-dependencies.actix-rt]
-version = "1.0.0"
+[dev-dependencies]
+actix-rt = "2.2.0"
 
 [dev-dependencies.tokio]
-features = ["rt-core", "rt-threaded", "macros", "time"]
-version = "0.2.13"
+features = ["macros", "rt-multi-thread", "time"]
+version = "1.6.1"

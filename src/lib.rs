@@ -135,7 +135,7 @@ mod tests {
             }
         });
 
-        time::delay_for(Duration::from_millis(100)).await;
+        time::sleep(Duration::from_millis(100)).await;
 
         assert_eq!(vec![1], vec.lock().unwrap().clone());
     }
@@ -162,7 +162,7 @@ mod tests {
             }
         });
 
-        time::delay_for(Duration::from_millis(100)).await;
+        time::sleep(Duration::from_millis(100)).await;
 
         assert_eq!(vec![1], vec.lock().unwrap().clone());
     }
