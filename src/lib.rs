@@ -34,6 +34,7 @@
 use futures::channel::mpsc;
 use futures::channel::mpsc::TrySendError;
 use futures::StreamExt;
+use std::fmt;
 use std::future::Future;
 use std::ops::Deref;
 use std::ops::DerefMut;
@@ -56,6 +57,12 @@ impl FuturesSender {
     }
 }
 
+impl fmt::Debug for FuturesSender {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.debug_struct("FuturesSender").finish()
+    }
+}
+
 impl Deref for FuturesSender {
     type Target = mpsc::UnboundedSender<PinnedBoxedFuture>;
 
@@ -73,6 +80,12 @@ impl DerefMut for FuturesSender {
 /// Receiver channel for futures sent with sender, can be used to run received futures manually or
 /// (most likely) using `FuturesReceiver::run_receiver()` method
 pub struct FuturesReceiver(mpsc::UnboundedReceiver<PinnedBoxedFuture>);
+
+impl fmt::Debug for FuturesReceiver {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.debug_struct("FuturesReceiver").finish()
+    }
+}
 
 impl FuturesReceiver {
     /// Run futures sent by sender using runtime-specific tasks spawner
